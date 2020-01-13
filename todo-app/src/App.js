@@ -21,6 +21,7 @@ class App extends Component {
             Learn React
         </a>
         <FirstComponent />
+        <SecondComponent />
         </header>
         </div>
     );
@@ -33,6 +34,16 @@ class FirstComponent extends Component {
             <div className="firstComponent">
                 First Component
             </div>
+        );
+    }
+}
+
+class SecondComponent extends Component {
+    render() {
+        return (
+           <div className="secondComponent">
+               Second Component
+           </div> 
         );
     }
 }
