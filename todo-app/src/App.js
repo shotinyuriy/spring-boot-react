@@ -22,6 +22,7 @@ class App extends Component {
         </a>
         <FirstComponent />
         <SecondComponent />
+        <ThirdComponent />
         </header>
         </div>
     );
@@ -47,4 +48,13 @@ class SecondComponent extends Component {
         );
     }
 }
+
+function ThirdComponent() {
+    return (
+        <div className="secondComponent">
+            Third Component
+        </div> 
+     );
+}
+
 export default App;
