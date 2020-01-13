@@ -20,9 +20,20 @@ class App extends Component {
             >
             Learn React
         </a>
+        <FirstComponent />
         </header>
         </div>
     );
+    }
+}
+
+class FirstComponent extends Component {
+    render() {
+        return (
+            <div className="firstComponent">
+                First Component
+            </div>
+        );
     }
 }
 export default App;
