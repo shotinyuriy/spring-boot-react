@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FirstComponent, { SecondComponent } from './components/learning-examples/FirstComponent';
+import ThirdComponent, { FourthComponent } from './components/learning-examples/ThirdComponent';
 import logo from './logo.svg';
 import './App.css';
 
@@ -30,40 +32,5 @@ class App extends Component {
     }
 }
 
-class FirstComponent extends Component {
-    render() {
-        return (
-            <div className="firstComponent">
-                First Component
-            </div>
-        );
-    }
-}
-
-class SecondComponent extends Component {
-    render() {
-        return (
-           <div className="secondComponent">
-               Second Component
-           </div> 
-        );
-    }
-}
-
-function ThirdComponent() {
-    return (
-        <div className="thirdComponent">
-            Third Component
-        </div> 
-     );
-}
-
-function FourthComponent() {
-    return (
-        <div className="fourthComponent">
-            FourthComponent
-        </div>
-    );
-}
 
 export default App;
