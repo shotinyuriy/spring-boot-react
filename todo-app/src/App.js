@@ -13,6 +13,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Counter></Counter>
+                <Counter></Counter>
             </div>
         );
     }

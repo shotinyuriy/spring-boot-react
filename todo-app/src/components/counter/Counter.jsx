@@ -15,6 +15,7 @@ class Counter extends Component {
     }
 
     render() {
+        const counterStyle = {fontFamily: 'Arial', color: '#444444'};
         return (
             <div className="counter">
                 <h1>Counter</h1>
@@ -22,7 +23,7 @@ class Counter extends Component {
                 <button onClick={this.increment}>+1</button>
                 <button onClick={this.decrement}>-1</button>
                 </div>
-                <div className="count">
+                <div className="count" style={counterStyle}>
                 <span >{this.state.counter}</span>
                 </div>
             </div>
@@ -30,14 +31,14 @@ class Counter extends Component {
     };
 
     increment() {
-        console.log('increment');
+        // this.state.counter++ => Bad Practice
         this.setState({
             counter: this.state.counter + 1
         });
     };
     
     decrement() {
-        console.log('decrement');
+        // this.state.counter-- => Bad Practice
         this.setState({
             counter: this.state.counter - 1
         });
