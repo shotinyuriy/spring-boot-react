@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FirstComponent, { SecondComponent } from './components/learning-examples/FirstComponent';
+import FirstComponent from './components/learning-examples/FirstComponent';
+import { SecondComponent } from './components/learning-examples/SecondComponent';
 import ThirdComponent, { FourthComponent } from './components/learning-examples/ThirdComponent';
 import logo from './logo.svg';
 import './App.css';
