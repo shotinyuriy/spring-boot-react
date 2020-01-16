@@ -1,3 +1,6 @@
+.counterLine {
+}
+
 button {
     padding: 10px;
     width: 50px;
@@ -10,4 +13,11 @@ button {
 .count {
     padding: 10px;
     font-size: 20pt;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    padding: 5px;
+    width: 200px;
 }
