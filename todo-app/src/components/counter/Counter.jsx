@@ -20,8 +20,8 @@ class Counter extends Component {
             <div className="counter">
                 <h1>Counter</h1>
                 <div>
-                <button onClick={this.increment}>+1</button>
-                <button onClick={this.decrement}>-1</button>
+        <button onClick={this.increment}>+{this.props.by}</button>
+                <button onClick={this.decrement}>-{this.props.by}</button>
                 </div>
                 <div className="count" style={counterStyle}>
                 <span >{this.state.counter}</span>
@@ -33,14 +33,14 @@ class Counter extends Component {
     increment() {
         // this.state.counter++ => Bad Practice
         this.setState({
-            counter: this.state.counter + 1
+            counter: this.state.counter + this.props.by
         });
     };
     
     decrement() {
         // this.state.counter-- => Bad Practice
         this.setState({
-            counter: this.state.counter - 1
+            counter: this.state.counter - this.props.by
         });
     };
 }
