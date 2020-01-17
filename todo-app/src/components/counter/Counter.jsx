@@ -16,11 +16,11 @@ class Counter extends Component {
         return (
             <div className="counter">
                 <h1>Counter</h1>
-                <CounterButton title="Peter" by={1} incrementMethod={this.increment}></CounterButton>
+                <CounterButton title="Peter" by={2} incrementMethod={this.increment}></CounterButton>
                 <CounterButton title="John" by={5} incrementMethod={this.increment}></CounterButton>
                 <CounterButton title="Barnie" by={10} incrementMethod={this.increment}></CounterButton>
                 <CounterButton title="Melissa" incrementMethod={this.increment}></CounterButton>
-                <div>
+                <div className="total">
                     Total: {this.state.counter}
                 </div>
             </div>
@@ -28,10 +28,12 @@ class Counter extends Component {
     }
 
     increment(by) {
-        console.log(`increment in parent by ${by}`);
-        this.setState({
-            counter: (this.state.counter + by)
-        });
+        // console.log(`increment in parent by ${by}`);
+        this.setState(
+            (prevState) => {
+                return {counter: (prevState.counter + by)};
+            }
+        );
     }
 }
 
@@ -49,24 +51,28 @@ class CounterButton extends Component {
 
     render() {
         const counterStyle = {fontFamily: 'Arial', color: '#444444'};
+        let color = 'red';
+        if (this.state.counter >= 15) color = 'orange';
+        if (this.state.counter >= 30) color = 'green';
         return (
                 <div className="counterLine">
                     <span className="title">{this.props.title}:</span>
                 <span>
                 <button onClick={this.increment}>+{this.props.by}</button>
                 </span>
-                <span className="count" style={counterStyle}>
-                <span >{this.state.counter}</span>
-                </span>
+
+                <div className="progressBar" style={{width: this.state.counter+'px', background: color}}></div>
                 </div>
         );
     };
 
     increment() {
         // this.state.counter++ => Bad Practice
-        this.setState({
-            counter: this.state.counter + this.props.by
-        });
+        this.setState(
+            (prevState) => {
+                return {counter: prevState.counter + this.props.by};
+            }
+        );
         this.props.incrementMethod(this.props.by);
     };
 }

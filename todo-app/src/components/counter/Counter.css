@@ -1,4 +1,7 @@
 .counterLine {
+    text-align: left;
+    position: relative;
+    left: 40%;
 }
 
 button {
@@ -17,7 +20,20 @@ button {
 
 .title {
     font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
     font-size: 12pt;
     padding: 5px;
-    width: 200px;
+    width: 100px;
+}
+
+.progressBar {
+    display: inline-block;
+    height: 18px;
+    background: red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.total {
+    font-size: 20pt;
 }
