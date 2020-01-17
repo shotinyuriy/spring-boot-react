@@ -13,9 +13,16 @@ button {
     color: aliceblue;
 }
 
+button.reset {
+    width: 200px;
+    background: #fecba9;
+    color: rgb(15,7,0);
+}
+
 .count {
-    padding: 10px;
-    font-size: 20pt;
+    position: relative;
+    bottom: 10px;
+    font-size: 8pt;
 }
 
 .title {
