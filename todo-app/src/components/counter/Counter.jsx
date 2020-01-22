@@ -99,6 +99,28 @@ class CounterButton extends Component {
     // state => counter = 0
     constructor() {
         super(); // Error number one - not calling super()
+    }
+
+    render() {
+        const counterStyle = {fontFamily: 'Arial', color: '#444444'};
+        return (
+                <div className="counterLine">
+                    <span className="title">{this.props.title}:</span>
+                <span>
+                <button onClick={() => {this.props.incrementMethod(this.props.by) }}>+{this.props.by}</button>
+                <button onClick={() => { this.props.decrementMethod(this.props.by) }}>-{this.props.by}</button>
+                </span>
+                </div>
+        );
+    }
+}
+
+class CounterButtonWithBar extends Component {
+
+    // Define the initial state in a constructor
+    // state => counter = 0
+    constructor() {
+        super(); // Error number one - not calling super()
         this.state = {
             counter : 0
         }
